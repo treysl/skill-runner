@@ -191,6 +191,8 @@ SKILL_CACHE_DIR=C:/Users/treyl/skill-runner/.runner-cache/cip-report-06-03-26-tl
 
 Interactive skill steps that required `ask_user_input_v0` are replaced by OpenRouter in this pipeline.
 
+See **[CAPSTONE-CHECKLIST.md](CAPSTONE-CHECKLIST.md)** for capstone deliverable tracking against the Unit 2 project plan.
+
 ## AI disclaimer
 
 Delivered reports should include:
