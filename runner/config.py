@@ -8,9 +8,13 @@ from dotenv import load_dotenv
 load_dotenv()
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL_DIR = ROOT / "skills" / "cip-report-06-03-26-tl"
-BUILD_SCRIPT = SKILL_DIR / "scripts" / "build_cip_report.py"
-SKILL_MD = SKILL_DIR / "SKILL.md"
+
+SKILL_PACKAGE = Path(
+    os.getenv("SKILL_PACKAGE", ROOT / "skills" / "cip-report-06-03-26-tl.skill")
+).expanduser()
+SKILL_CACHE_DIR = Path(
+    os.getenv("SKILL_CACHE_DIR", ROOT / ".runner-cache" / "cip-report-06-03-26-tl")
+).expanduser()
 
 DATA_DIR = Path(os.getenv("DATA_DIR", ROOT / "data")).expanduser()
 OUTPUT_DIR = Path(os.getenv("OUTPUT_DIR", ROOT / "outputs")).expanduser()
@@ -28,3 +32,17 @@ DEFAULT_USER = os.getenv("DEFAULT_USER", "n8n")
 
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+
+def get_skill_dir() -> Path:
+    from runner.skill_loader import ensure_skill_extracted
+
+    return ensure_skill_extracted(SKILL_PACKAGE, SKILL_CACHE_DIR)
+
+
+def get_build_script() -> Path:
+    return get_skill_dir() / "scripts" / "build_cip_report.py"
+
+
+def get_skill_md() -> Path:
+    return get_skill_dir() / "SKILL.md"

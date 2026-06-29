@@ -2,13 +2,23 @@
 
 These instructions apply when **skill-runner** (n8n / OpenRouter pipeline) chooses build parameters automatically. They **override** the interactive skill defaults in `SKILL.md` where noted below.
 
+## Runtime config
+
+Edit the JSON below to change pipeline defaults. No code changes or server restart required — this file is read on every run.
+
+```json
+{
+  "divisions": ["Construction"]
+}
+```
+
 ## Pipeline defaults (use unless `requested_overrides` says otherwise)
 
 | Setting | Pipeline default | Maps to |
 |---------|------------------|---------|
 | **Completed-tab window** | **YTD** (year to date) | `"completed_range": "ytd"` |
 | Complete Overview window | Last 12 completed months | `"overview_range": "last_12_complete_months"` |
-| Divisions | **All divisions** listed in `export_inspection.divisions` (exclude `(blank)`) | `"divisions": [...]` |
+| **Divisions** | **Construction only** (see Runtime config JSON above) | `"divisions": ["Construction"]` |
 | Branches | All (no branch filter) | `"branches": []` |
 | Minimum estimated revenue | $0 | `"min_est_revenue": 0` |
 | Expected sub margin | 28.1% | `"sub_margin": 0.281` |
@@ -24,8 +34,9 @@ These instructions apply when **skill-runner** (n8n / OpenRouter pipeline) choos
 
 ## Divisions
 
-- Include **every division** in `export_inspection.divisions` with a real name (not `(blank)`).
-- Do **not** default to Construction only. Do not pick a single division unless `requested_overrides.divisions` narrows the list.
+- Use the **`divisions` list in Runtime config JSON** as the default.
+- Only include additional divisions when `requested_overrides.divisions` explicitly expands the list.
+- Verify each configured division exists in `export_inspection.divisions`; if Construction is missing, explain in `reasoning` and use what is available.
 
 ## Branches
 

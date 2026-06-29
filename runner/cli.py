@@ -48,6 +48,24 @@ def _cmd_run(args: argparse.Namespace) -> int:
     return 0 if result["build"]["success"] else 1
 
 
+def _cmd_install(_args: argparse.Namespace) -> int:
+    from runner.config import SKILL_PACKAGE, get_build_script, get_skill_dir, get_skill_md
+
+    skill_dir = get_skill_dir()
+    print(
+        json.dumps(
+            {
+                "skill_package": str(SKILL_PACKAGE.resolve()),
+                "skill_dir": str(skill_dir.resolve()),
+                "skill_md": str(get_skill_md().resolve()),
+                "build_script": str(get_build_script().resolve()),
+            },
+            indent=2,
+        )
+    )
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="skill-runner CLI for CIP report pipeline")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -69,6 +87,9 @@ def main(argv: list[str] | None = None) -> int:
     run_parser.add_argument("--user")
     run_parser.add_argument("--overrides", help="JSON object of build overrides")
     run_parser.set_defaults(func=_cmd_run)
+
+    install_parser = sub.add_parser("install", help="Extract the packaged .skill file to cache")
+    install_parser.set_defaults(func=_cmd_install)
 
     args = parser.parse_args(argv)
     try:

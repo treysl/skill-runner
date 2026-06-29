@@ -4,6 +4,7 @@ venv/
 __pycache__/
 *.pyc
 .pytest_cache/
+.runner-cache/
 outputs/*.xlsx
 data/*.xlsx
 !data/.gitkeep

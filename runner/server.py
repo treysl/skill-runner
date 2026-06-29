@@ -1,19 +1,29 @@
 from __future__ import annotations
 
+from contextlib import asynccontextmanager
 from typing import Any
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 
-from runner.config import DATA_DIR, OUTPUT_DIR, RUNNER_HOST, RUNNER_PORT
+from runner.config import DATA_DIR, OUTPUT_DIR, RUNNER_HOST, RUNNER_PORT, SKILL_PACKAGE, get_skill_dir
 from runner.inspect import find_input_file, inspect_export
 from runner.orchestrate import orchestrate_build_config
 from runner.pipeline import BuildRequest, InspectRequest, RunRequest, run_pipeline
+
+
+@asynccontextmanager
+async def lifespan(_app: FastAPI):
+    skill_dir = get_skill_dir()
+    print(f"Skill ready: {SKILL_PACKAGE.name} -> {skill_dir}")
+    yield
+
 
 app = FastAPI(
     title="skill-runner",
     description="Local API for n8n to orchestrate CIP report skills via OpenRouter",
     version="0.1.0",
+    lifespan=lifespan,
 )
 
 

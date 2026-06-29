@@ -168,11 +168,28 @@ Recommended models (set in `.env`):
 OPENROUTER_MODEL=anthropic/claude-sonnet-4
 ```
 
-## Skill source
+## Skill packaging
 
-Bundled at `skills/cip-report-06-03-26-tl/` from `cip-report-06-03-26-tl.skill`.
+The skill ships as a single packaged file:
 
-Original skill steps that required interactive `ask_user_input_v0` are replaced by OpenRouter in this pipeline. The Python build script and workbook output match the skill spec.
+```
+skills/cip-report-06-03-26-tl.skill
+```
+
+That file is a ZIP archive (Cursor’s skill format). **skill-runner does not use Cursor** — on startup or first run it extracts the package into `.runner-cache/` (gitignored) and runs the build script from there.
+
+To update the skill, replace the `.skill` file and restart the runner. If the package is newer than the cache, it re-extracts automatically.
+
+Pipeline-only LLM overrides and **runtime defaults** (divisions, date windows, etc.) live in `runner/cip-orchestration.md`. Edit the **Runtime config** JSON block there to change defaults without code changes — the file is read on every run.
+
+Optional `.env` paths:
+
+```env
+SKILL_PACKAGE=C:/Users/treyl/skill-runner/skills/cip-report-06-03-26-tl.skill
+SKILL_CACHE_DIR=C:/Users/treyl/skill-runner/.runner-cache/cip-report-06-03-26-tl
+```
+
+Interactive skill steps that required `ask_user_input_v0` are replaced by OpenRouter in this pipeline.
 
 ## AI disclaimer
 

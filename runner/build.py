@@ -5,7 +5,7 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from runner.config import BUILD_SCRIPT, DEFAULT_CLIENT_NAME, DEFAULT_USER, LOGO_PATH, OUTPUT_DIR
+from runner.config import DEFAULT_CLIENT_NAME, DEFAULT_USER, LOGO_PATH, OUTPUT_DIR, get_build_script
 
 
 def _safe_name(value: str) -> str:
@@ -21,10 +21,12 @@ def build_output_path(client_name: str) -> Path:
     return OUTPUT_DIR / filename
 
 
-def config_to_cli_args(config: dict[str, Any], input_file: Path, output_file: Path) -> list[str]:
+def config_to_cli_args(
+    config: dict[str, Any], input_file: Path, output_file: Path, build_script: Path
+) -> list[str]:
     args = [
         sys.executable,
-        str(BUILD_SCRIPT),
+        str(build_script),
         str(input_file),
         str(output_file),
         "--client-name",
@@ -60,13 +62,14 @@ def config_to_cli_args(config: dict[str, Any], input_file: Path, output_file: Pa
 
 
 def run_build(config: dict[str, Any], input_file: Path, output_file: Path | None = None) -> dict[str, Any]:
-    if not BUILD_SCRIPT.exists():
-        raise FileNotFoundError(f"Build script not found: {BUILD_SCRIPT}")
+    build_script = get_build_script()
+    if not build_script.exists():
+        raise FileNotFoundError(f"Build script not found: {build_script}")
 
     output_path = output_file or build_output_path(str(config.get("client_name", DEFAULT_CLIENT_NAME)))
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    cmd = config_to_cli_args(config, input_file, output_path)
+    cmd = config_to_cli_args(config, input_file, output_path, build_script)
     completed = subprocess.run(
         cmd,
         capture_output=True,

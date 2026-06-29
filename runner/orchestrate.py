@@ -7,7 +7,7 @@ from typing import Any
 
 import httpx
 
-from runner.config import OPENROUTER_API_KEY, OPENROUTER_BASE_URL, OPENROUTER_MODEL, SKILL_MD
+from runner.config import OPENROUTER_API_KEY, OPENROUTER_BASE_URL, OPENROUTER_MODEL, get_skill_md
 
 ORCHESTRATION_MD = Path(__file__).resolve().parent / "cip-orchestration.md"
 from runner.inspect import ExportInspection
@@ -35,10 +35,30 @@ def _load_orchestration_instructions() -> str:
     return ""
 
 
+def _load_runtime_config() -> dict[str, Any]:
+    """Parse the JSON block under '## Runtime config' in cip-orchestration.md."""
+    text = _load_orchestration_instructions()
+    match = re.search(r"## Runtime config[\s\S]*?```json\s*(\{[\s\S]*?\})\s*```", text)
+    if not match:
+        return {}
+    try:
+        return json.loads(match.group(1))
+    except json.JSONDecodeError:
+        return {}
+
+
+def _apply_runtime_defaults(config: dict[str, Any]) -> dict[str, Any]:
+    runtime = _load_runtime_config()
+    for key, value in runtime.items():
+        config.setdefault(key, value)
+    return config
+
+
 def _load_skill_excerpt() -> str:
-    if not SKILL_MD.exists():
+    skill_md = get_skill_md()
+    if not skill_md.exists():
         return "CIP report skill unavailable."
-    text = SKILL_MD.read_text(encoding="utf-8")
+    text = skill_md.read_text(encoding="utf-8")
     start = text.find("## Pre-Flight Checks")
     end = text.find("## How to Run")
     if start != -1 and end != -1:
@@ -58,11 +78,14 @@ def _extract_json(content: str) -> dict[str, Any]:
 
 
 def _default_config(inspection: ExportInspection, client_name: str, user: str) -> dict[str, Any]:
-    divisions = [item["value"] for item in inspection.divisions if item["value"] != "(blank)"]
+    runtime = _load_runtime_config()
+    divisions = runtime.get("divisions")
+    if not divisions:
+        divisions = [item["value"] for item in inspection.divisions if item["value"] != "(blank)"]
     if not divisions:
         divisions = ["Construction"]
 
-    return {
+    config = {
         "client_name": client_name,
         "branches": [],
         "divisions": divisions,
@@ -77,6 +100,7 @@ def _default_config(inspection: ExportInspection, client_name: str, user: str) -
         "change_note": "Generated via skill-runner n8n pipeline",
         "reasoning": "Fallback defaults because OpenRouter was unavailable.",
     }
+    return _apply_runtime_defaults(config)
 
 
 async def orchestrate_build_config(
@@ -107,19 +131,20 @@ async def orchestrate_build_config(
         "then return ONLY valid JSON matching the schema. "
         "Pipeline orchestration defaults in `pipeline_orchestration_instructions` override interactive "
         "skill defaults in `skill_preflight_rules` when they conflict. "
-        "Include every division present unless the user override narrows them. "
+        "Use the Runtime config JSON in `pipeline_orchestration_instructions` for divisions and other defaults. "
         "branches=[] means all branches."
     )
     user_prompt = {
         "pipeline_orchestration_instructions": pipeline_instructions,
+        "runtime_config": _load_runtime_config(),
         "skill_preflight_rules": skill_excerpt,
         "expected_json_schema": BUILD_CONFIG_SCHEMA,
         "export_inspection": inspection.to_dict(),
         "requested_overrides": overrides,
         "instructions": (
             "Choose build parameters for one CIP report run. "
-            "Use pipeline defaults (YTD completed-tab window, all divisions) unless "
-            "requested_overrides or export data clearly require a change."
+            "Use pipeline defaults and Runtime config JSON unless "
+            "requested_overrides explicitly change them."
         ),
     }
 
@@ -153,5 +178,6 @@ async def orchestrate_build_config(
     config = _extract_json(content)
     config.setdefault("client_name", client_name)
     config.setdefault("user", user)
+    _apply_runtime_defaults(config)
     config.update(overrides)
     return config
