@@ -22,18 +22,13 @@
 
 ---
 
-
-
 ## SMART goals
-
-
 
 ### Goal 1 — Prototype delivery (Specific, Time-bound)
 
 - [x] Working skill-runner prototype implemented
 - [x] At least one standardized report generated from sample data
 - [x] No interactive chat session required during execution
-
 
 
 ### Goal 2 — Reproducibility (Measurable)
@@ -50,7 +45,6 @@
 - [ ] Measurable reduction in analyst effort for the selected report
 
 
-
 ### Goal 4 — Documentation & maintainability (Achievable, Relevant)
 
 - [ ] Architecture documented
@@ -58,8 +52,6 @@
 - [ ] Another technical team member could run and modify the pipeline from docs alone
 
 ---
-
-
 
 ## Expected deliverables
 
@@ -70,38 +62,23 @@
 
 ---
 
-
-
 ## Project lifecycle phases (Gantt-aligned)
 
 
-
-### Phase 1 — Initiation & problem definition
-
+### 1. Initiation Phase — Initiation, problem definition, Literature review & requirements
 - [ ] Problem statement finalized
 - [ ] Stakeholders and constraints identified
 - [ ] Scope statement written
-
-
-
-### Phase 2 — Literature review & requirements
-
 - [ ] Research on LLM-in-pipeline / ETL patterns reviewed
 - [ ] Representative use case selected (CIP report)
 - [ ] Input data requirements documented (Aspire Opportunity export)
 
-
-
-### Phase 3 — Architecture & scope design
-
+### 2. Planning Phase — Architecture & scope design
 - [ ] Architecture defined: n8n trigger → runner API → OpenRouter orchestration → packaged `.skill` → Python build script
 - [ ] Data folder, output folder, and config strategy defined
 - [ ] Packaged `.skill` file as source of truth (extract to cache at runtime)
 
-
-
-### Phase 4 — Prototype development
-
+###  3. Execution — Prototype development
 - [ ] GitHub repository created (`skill-runner`)
 - [ ] Packaged skill stored in repo (`skills/*.skill`)
 - [ ] Runner API implemented (inspect, orchestrate, build, `/run`)
@@ -109,34 +86,21 @@
 - [ ] Runtime config in markdown (`runner/cip-orchestration.md`) for division/date defaults
 - [ ] n8n workflow created and tested locally
 - [ ] Sample/anonymized data used for development
-
-
-
-### Phase 5 — Testing & evaluation
-
 - [ ] End-to-end pipeline run succeeds
 - [ ] Completed-tab date window validated (YTD default)
 - [ ] Division filter validated (Construction-only default)
 - [ ] Five-run reproducibility test executed and recorded
 - [ ] Runtime and log output captured
 
-
-
-### Phase 6 — Draft preparation
-
+### 4. Monitoring — Draft preparation
 - [ ] Capstone draft written from prototype results
 - [ ] Architecture and evaluation sections updated with actual outcomes
 
-
-
-### Phase 7 — Final submission
-
+###  5. Closure — Final submission
 - [ ] Final capstone document submitted
 - [ ] Repository cleaned and documented for reviewer access
 
 ---
-
-
 
 ## Technical implementation checklist (skill-runner)
 
@@ -153,8 +117,6 @@
 
 ---
 
-
-
 ## Resources
 
 - [x] GitHub repository for version control
@@ -167,8 +129,6 @@
 
 ---
 
-
-
 ## Ethical considerations
 
 - [ ] Sensitive data handled per organizational policy
@@ -178,8 +138,6 @@
 - [x] Anonymized or synthetic sample data used in prototype
 
 ---
-
-
 
 ## Security & mitigation
 
@@ -192,8 +150,6 @@
 - [ ] Least-privilege access to data folders and outputs
 
 ---
-
-
 
 ## Feasibility assessment
 
@@ -212,8 +168,6 @@
 
 ---
 
-
-
 ## Acceptance criteria (closure)
 
 - [ ] Prototype generates at least one report without chat during execution
@@ -223,8 +177,6 @@
 - [ ] Evaluation and scaling reflection completed
 
 ---
-
-
 
 ## Notes
 
