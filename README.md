@@ -70,7 +70,7 @@ Health check: [http://127.0.0.1:8787/health](http://127.0.0.1:8787/health)
 
 ### 4. Import the n8n workflow
 
-1. Open your local n8n instance.
+1. Open your local n8n instance. (cd C:\Users\treyl>npx n8n start)
 2. **Workflows → Import from File** → select `n8n/cip-report-pipeline.json`.
 3. In the **Run CIP pipeline** node, set the URL:
    - **n8n in Docker** (most local installs): `http://host.docker.internal:8787/run`
