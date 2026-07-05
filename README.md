@@ -1,6 +1,6 @@
 # skill-runner
 
-Run Cursor Agent Skills locally and trigger them from **n8n**, with **OpenRouter** orchestrating multi-step skill decisions.
+Run Skills created by LLM's locally and trigger them from **n8n**, with **OpenRouter** orchestrating multi-step skill decisions.
 
 The first bundled skill is **CIP Report v06-03-26** — it builds a THG Construction In Process Excel workbook from an Aspire Opportunity export.
 
