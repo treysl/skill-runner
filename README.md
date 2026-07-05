@@ -59,6 +59,13 @@ Health check: [http://127.0.0.1:8787/health](http://127.0.0.1:8787/health)
 
 ## n8n
 
+Start n8n:
+
+```powershell
+cd C:\Users\treyl
+npx n8n start
+```
+
 Import `n8n/cip-report-pipeline.json`, then set the **Run CIP pipeline** URL:
 
 - n8n in Docker: `http://host.docker.internal:8787/run`

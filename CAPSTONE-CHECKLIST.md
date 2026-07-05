@@ -4,7 +4,6 @@
 
  Mark items `- [x]` when complete.
 
-
 ## Scope
 
 ### In scope
@@ -12,7 +11,7 @@
 - [x] Requirements elicitation for at least one representative reporting use case (CIP / construction-in-process report)
 - [x] Skill-runner architecture designed (GitHub skills repo + deterministic Python scripts)
 - [x] Proof-of-concept pipeline: read sample data → invoke skills → run scripts → produce report files
-- [ ] Basic evaluation: reproducibility, runtime, maintainability (pilot runs + logs)
+- [x] Basic evaluation: reproducibility, runtime, maintainability (pilot runs + logs)
 
 ### Out of scope (explicitly deferred)
 
@@ -23,7 +22,11 @@
 
 ---
 
+
+
 ## SMART goals
+
+
 
 ### Goal 1 — Prototype delivery (Specific, Time-bound)
 
@@ -31,16 +34,22 @@
 - [x] At least one standardized report generated from sample data
 - [x] No interactive chat session required during execution
 
+
+
 ### Goal 2 — Reproducibility (Measurable)
 
-- [ ] Five consecutive runs completed with same input + configuration
-- [ ] Outputs consistent across runs (differences limited to acceptable formatting variation)
-- [ ] Reconciliation / validation step passes on each run
+- [x] Five consecutive runs completed with same input + configuration
+- [x] Outputs consistent across runs (differences limited to acceptable formatting variation)
+- [x] Reconciliation / validation step passes on each run
+
+![Five consecutive CIP report outputs in outputs/](docs/images/goal2-reproducibility-outputs.png)
 
 ### Goal 3 — Efficiency (Measurable, Relevant)
 
 - [ ] Before-and-after comparison documented (manual steps vs single pipeline run)
 - [ ] Measurable reduction in analyst effort for the selected report
+
+
 
 ### Goal 4 — Documentation & maintainability (Achievable, Relevant)
 
@@ -49,6 +58,8 @@
 - [ ] Another technical team member could run and modify the pipeline from docs alone
 
 ---
+
+
 
 ## Expected deliverables
 
@@ -59,7 +70,11 @@
 
 ---
 
+
+
 ## Project lifecycle phases (Gantt-aligned)
+
+
 
 ### Phase 1 — Initiation & problem definition
 
@@ -67,17 +82,23 @@
 - [ ] Stakeholders and constraints identified
 - [ ] Scope statement written
 
+
+
 ### Phase 2 — Literature review & requirements
 
 - [ ] Research on LLM-in-pipeline / ETL patterns reviewed
 - [ ] Representative use case selected (CIP report)
 - [ ] Input data requirements documented (Aspire Opportunity export)
 
+
+
 ### Phase 3 — Architecture & scope design
 
 - [ ] Architecture defined: n8n trigger → runner API → OpenRouter orchestration → packaged `.skill` → Python build script
 - [ ] Data folder, output folder, and config strategy defined
 - [ ] Packaged `.skill` file as source of truth (extract to cache at runtime)
+
+
 
 ### Phase 4 — Prototype development
 
@@ -89,6 +110,8 @@
 - [ ] n8n workflow created and tested locally
 - [ ] Sample/anonymized data used for development
 
+
+
 ### Phase 5 — Testing & evaluation
 
 - [ ] End-to-end pipeline run succeeds
@@ -97,10 +120,14 @@
 - [ ] Five-run reproducibility test executed and recorded
 - [ ] Runtime and log output captured
 
+
+
 ### Phase 6 — Draft preparation
 
 - [ ] Capstone draft written from prototype results
 - [ ] Architecture and evaluation sections updated with actual outcomes
+
+
 
 ### Phase 7 — Final submission
 
@@ -108,6 +135,8 @@
 - [ ] Repository cleaned and documented for reviewer access
 
 ---
+
+
 
 ## Technical implementation checklist (skill-runner)
 
@@ -124,6 +153,8 @@
 
 ---
 
+
+
 ## Resources
 
 - [x] GitHub repository for version control
@@ -136,6 +167,8 @@
 
 ---
 
+
+
 ## Ethical considerations
 
 - [ ] Sensitive data handled per organizational policy
@@ -145,6 +178,8 @@
 - [x] Anonymized or synthetic sample data used in prototype
 
 ---
+
+
 
 ## Security & mitigation
 
@@ -158,20 +193,26 @@
 
 ---
 
+
+
 ## Feasibility assessment
 
-| Dimension | Planned rating | Status | Notes |
-|-----------|----------------|--------|-------|
-| Technical | High | | Python, GitHub, skills, n8n — no exotic infra |
-| Operational | High | | Fits existing BI reporting patterns; single use case |
-| Economic | High | | Tools in place; incremental LLM cost is small |
-| Schedule | Medium | | Seven-week window — scope control critical |
+
+| Dimension   | Planned rating | Status | Notes                                                |
+| ----------- | -------------- | ------ | ---------------------------------------------------- |
+| Technical   | High           |        | Python, GitHub, skills, n8n — no exotic infra        |
+| Operational | High           |        | Fits existing BI reporting patterns; single use case |
+| Economic    | High           |        | Tools in place; incremental LLM cost is small        |
+| Schedule    | Medium         |        | Seven-week window — scope control critical           |
+
 
 - [ ] Feasibility checklist reviewed at initiation
 - [ ] Scope creep actively guarded (Oguz)
 - [ ] Schedule risks tracked on Gantt
 
 ---
+
+
 
 ## Acceptance criteria (closure)
 
@@ -183,12 +224,17 @@
 
 ---
 
+
+
 ## Notes
 
-_Add run dates, output file paths, test results, and blockers here._
+*Add run dates, output file paths, test results, and blockers here.*
 
-| Date | Milestone | Result |
-|------|-----------|--------|
-| | First end-to-end n8n run | |
-| | Construction-only + YTD run | |
-| | Five-run reproducibility test | |
+
+| Date | Milestone                     | Result |
+| ---- | ----------------------------- | ------ |
+|      | First end-to-end n8n run      |        |
+|      | Construction-only + YTD run   |        |
+|      | Five-run reproducibility test |        |
+
+
