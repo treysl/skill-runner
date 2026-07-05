@@ -156,10 +156,10 @@
 
 | Dimension   | Planned rating | Status | Notes                                                |
 | ----------- | -------------- | ------ | ---------------------------------------------------- |
-| Technical   | High           |        | Python, GitHub, skills, n8n — no exotic infra        |
-| Operational | High           |        | Fits existing BI reporting patterns; single use case |
-| Economic    | High           |        | Tools in place; incremental LLM cost is small        |
-| Schedule    | Medium         |        | Seven-week window — scope control critical           |
+| Technical   | High           | OK     | Python, GitHub, skills, n8n — no exotic infra        |
+| Operational | High           | OK     | Fits existing BI reporting patterns; single use case |
+| Economic    | High           | OK     | Tools in place; incremental LLM cost is small        |
+| Schedule    | Medium         | OK     | Seven-week window — scope control critical           |
 
 
 - [ ] Feasibility checklist reviewed at initiation
