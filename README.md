@@ -66,7 +66,22 @@ cd C:\Users\treyl
 npx n8n start
 ```
 
-Import `n8n/cip-report-pipeline.json`, then set the **Run CIP pipeline** URL:
+Add your n8n API key to `.env` (create one in n8n: **Settings → n8n API**):
+
+```env
+N8N_API_KEY=your-key-here
+N8N_BASE_URL=http://127.0.0.1:5678/api/v1
+```
+
+Push workflow changes without re-importing:
+
+```powershell
+python -m runner.cli n8n-sync
+```
+
+On first sync the workflow is created; later runs update it by name (or set `N8N_WORKFLOW_ID` in `.env`).
+
+Set the **Run CIP pipeline** URL in n8n if needed:
 
 - n8n in Docker: `http://host.docker.internal:8787/run`
 - n8n on Windows (no Docker): `http://127.0.0.1:8787/run`
@@ -93,6 +108,7 @@ Omit `filename` to use the newest `.xlsx` in `DATA_DIR`.
 python -m runner.cli inspect
 python -m runner.cli orchestrate --client-name "Acme Corp"
 python -m runner.cli run --client-name "Acme Corp"
+python -m runner.cli n8n-sync
 ```
 
 ## API

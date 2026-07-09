@@ -30,6 +30,10 @@ RUNNER_PORT = int(os.getenv("RUNNER_PORT", "8787"))
 DEFAULT_CLIENT_NAME = os.getenv("DEFAULT_CLIENT_NAME", "Client")
 DEFAULT_USER = os.getenv("DEFAULT_USER", "n8n")
 
+N8N_API_KEY = os.getenv("N8N_API_KEY", "").strip()
+N8N_BASE_URL = os.getenv("N8N_BASE_URL", "http://127.0.0.1:5678/api/v1").rstrip("/")
+N8N_WORKFLOW_ID = os.getenv("N8N_WORKFLOW_ID", "").strip()
+
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 

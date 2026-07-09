@@ -4,9 +4,11 @@ import argparse
 import asyncio
 import json
 import sys
+from pathlib import Path
 
 from runner.config import DATA_DIR, DEFAULT_CLIENT_NAME, DEFAULT_USER
 from runner.inspect import find_input_file, inspect_export
+from runner.n8n_sync import DEFAULT_WORKFLOW_PATH, sync_workflow
 from runner.orchestrate import orchestrate_build_config
 from runner.pipeline import run_pipeline
 
@@ -46,6 +48,21 @@ def _cmd_run(args: argparse.Namespace) -> int:
     )
     print(json.dumps(result, indent=2))
     return 0 if result["build"]["success"] else 1
+
+
+def _cmd_n8n_sync(args: argparse.Namespace) -> int:
+    result = sync_workflow(
+        Path(args.file) if args.file else None,
+        workflow_id=args.workflow_id,
+        activate=args.activate,
+    )
+    print(json.dumps(result, indent=2))
+    if result["action"] == "created":
+        print(
+            "\nTip: add N8N_WORKFLOW_ID to .env for faster future syncs.",
+            file=sys.stderr,
+        )
+    return 0
 
 
 def _cmd_install(_args: argparse.Namespace) -> int:
@@ -90,6 +107,26 @@ def main(argv: list[str] | None = None) -> int:
 
     install_parser = sub.add_parser("install", help="Extract the packaged .skill file to cache")
     install_parser.set_defaults(func=_cmd_install)
+
+    n8n_sync_parser = sub.add_parser(
+        "n8n-sync",
+        help="Push n8n/cip-report-pipeline.json to your n8n instance via API",
+    )
+    n8n_sync_parser.add_argument(
+        "--file",
+        help=f"Workflow JSON to upload (default: {DEFAULT_WORKFLOW_PATH})",
+    )
+    n8n_sync_parser.add_argument(
+        "--workflow-id",
+        help="n8n workflow ID to update (overrides N8N_WORKFLOW_ID)",
+    )
+    n8n_sync_parser.add_argument(
+        "--activate",
+        action=argparse.BooleanOptionalAction,
+        default=None,
+        help="Activate the workflow after sync (default: follow JSON active flag)",
+    )
+    n8n_sync_parser.set_defaults(func=_cmd_n8n_sync)
 
     args = parser.parse_args(argv)
     try:

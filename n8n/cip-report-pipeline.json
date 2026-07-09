@@ -2,6 +2,97 @@
   "name": "CIP Report — skill-runner",
   "nodes": [
     {
+      "parameters": {
+        "content": "### Webhook\nProduction entry point. Accepts `POST /cip-report` with `filename`, `client_name`, `user`, and optional `overrides`, then passes the body into the pipeline.",
+        "height": 150,
+        "width": 300,
+        "color": 4
+      },
+      "id": "b1b2c3d4-1001-4000-8000-000000000001",
+      "name": "Note: Webhook",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [-20, -60]
+    },
+    {
+      "parameters": {
+        "content": "### Test trigger\nManual entry for local testing. Runs the same pipeline as the webhook without sending an HTTP request.",
+        "height": 130,
+        "width": 300,
+        "color": 4
+      },
+      "id": "b1b2c3d4-1002-4000-8000-000000000002",
+      "name": "Note: Test trigger",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [-20, 120]
+    },
+    {
+      "parameters": {
+        "content": "### Prepare request\nNormalizes input from either trigger into a single shape: `filename`, `client_name`, `user`, and `overrides` (with defaults when fields are missing).",
+        "height": 150,
+        "width": 300,
+        "color": 4
+      },
+      "id": "b1b2c3d4-1003-4000-8000-000000000003",
+      "name": "Note: Prepare request",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [260, 40]
+    },
+    {
+      "parameters": {
+        "content": "### Run CIP pipeline\nCalls skill-runner at `POST /run` (default `http://127.0.0.1:8787/run`). Inspects the Excel export, orchestrates build settings via OpenRouter, and generates the CIP report.",
+        "height": 170,
+        "width": 300,
+        "color": 4
+      },
+      "id": "b1b2c3d4-1004-4000-8000-000000000004",
+      "name": "Note: Run CIP pipeline",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [520, 20]
+    },
+    {
+      "parameters": {
+        "content": "### Build succeeded?\nBranches on `build.success` from the skill-runner response. True continues to the success payload; false routes to the failure payload.",
+        "height": 150,
+        "width": 300,
+        "color": 4
+      },
+      "id": "b1b2c3d4-1005-4000-8000-000000000005",
+      "name": "Note: Build succeeded?",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [780, 40]
+    },
+    {
+      "parameters": {
+        "content": "### Success payload\nShapes the webhook response for a completed run: `status`, `output_file`, `config`, and an AI validation disclaimer.",
+        "height": 140,
+        "width": 300,
+        "color": 4
+      },
+      "id": "b1b2c3d4-1006-4000-8000-000000000006",
+      "name": "Note: Success payload",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [1040, -60]
+    },
+    {
+      "parameters": {
+        "content": "### Failure payload\nShapes the webhook response when the build fails: `status: error` and a `detail` message from the pipeline or HTTP error.",
+        "height": 140,
+        "width": 300,
+        "color": 4
+      },
+      "id": "b1b2c3d4-1007-4000-8000-000000000007",
+      "name": "Note: Failure payload",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [1040, 140]
+    },
+    {
       "parameters": {},
       "id": "a1b2c3d4-0001-4000-8000-000000000001",
       "name": "When clicking 'Test workflow'",
