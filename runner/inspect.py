@@ -86,8 +86,15 @@ def inspect_export(input_path: Path) -> ExportInspection:
 
 def find_input_file(data_dir: Path, filename: str | None = None) -> Path:
     if filename:
-        candidate = data_dir / filename
-        if not candidate.exists():
+        data_root = data_dir.resolve()
+        candidate = (data_root / filename).resolve()
+        try:
+            candidate.relative_to(data_root)
+        except ValueError as exc:
+            raise FileNotFoundError(
+                f"File must be inside the data folder: {filename}"
+            ) from exc
+        if candidate.suffix.lower() != ".xlsx" or not candidate.is_file():
             raise FileNotFoundError(f"File not found in data folder: {filename}")
         return candidate
 
