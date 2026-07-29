@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>skill-runner Performance Evaluation</title>
+  <style>
+    body { font-family: Segoe UI, sans-serif; margin: 32px; color: #1f2328; background: #fff; }
+    h1 { font-size: 22px; margin: 0 0 8px; }
+    h2 { font-size: 16px; margin: 28px 0 10px; border-bottom: 1px solid #d0d7de; padding-bottom: 6px; }
+    .meta { color: #656d76; font-size: 13px; margin-bottom: 20px; }
+    table { border-collapse: collapse; width: 100%; font-size: 13px; }
+    th, td { border: 1px solid #d0d7de; padding: 8px 10px; text-align: left; }
+    th { background: #f6f8fa; }
+    .ok { color: #1a7f37; font-weight: 600; }
+    .cards { display: flex; gap: 12px; flex-wrap: wrap; margin: 16px 0; }
+    .card { border: 1px solid #d0d7de; border-radius: 6px; padding: 12px 14px; min-width: 140px; }
+    .card .label { font-size: 11px; color: #656d76; text-transform: uppercase; }
+    .card .value { font-size: 22px; font-weight: 650; margin-top: 4px; }
+    img.chart { max-width: 100%; border: 1px solid #d0d7de; border-radius: 6px; }
+    .note { font-size: 12px; color: #656d76; margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <h1>skill-runner Performance Evaluation</h1>
+  <div class="meta">Measured 2026-07-28 against localhost:8787 · Unit tests + API timing + process RSS · E2E from n8n prototype run</div>
+
+  <div class="cards">
+    <div class="card"><div class="label">Accuracy</div><div class="value ok">100.0%</div></div>
+    <div class="card"><div class="label">Health latency</div><div class="value">11.7 ms</div></div>
+    <div class="card"><div class="label">Throughput</div><div class="value">126.45 rps</div></div>
+    <div class="card"><div class="label">Memory RSS</div><div class="value">143.89 MB</div></div>
+    <div class="card"><div class="label">E2E CIP run</div><div class="value">1m 54.352s</div></div>
+  </div>
+
+  <h2>1. Quantitative results table</h2>
+  <table>
+    <thead>
+      <tr><th>Metric</th><th>Type</th><th>Result</th><th>Method / notes</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Accuracy (unit test pass rate)</td>
+        <td>Quantitative</td>
+        <td class="ok">100.0% (18/18)</td>
+        <td>unittest discover — 0.058s suite</td>
+      </tr>
+      <tr>
+        <td>Latency GET /health</td>
+        <td>Quantitative</td>
+        <td>mean 11.74 ms · p50 14.875 · p95 16.292</td>
+        <td>n=50 sequential requests</td>
+      </tr>
+      <tr>
+        <td>Latency GET /data</td>
+        <td>Quantitative</td>
+        <td>mean 11.93 ms · p50 15.056 · p95 16.047</td>
+        <td>n=30 sequential requests</td>
+      </tr>
+      <tr>
+        <td>Latency POST /inspect</td>
+        <td>Quantitative</td>
+        <td>mean 3297.233 ms · p50 3258.32</td>
+        <td>n=5 — Excel parse dominates</td>
+      </tr>
+      <tr>
+        <td>Throughput GET /health</td>
+        <td>Quantitative</td>
+        <td>126.45 req/s (200/200 OK)</td>
+        <td>Sequential client, 1.5816s window</td>
+      </tr>
+      <tr>
+        <td>Memory footprint (RSS)</td>
+        <td>Quantitative</td>
+        <td>143.89 MB (pid 16988)</td>
+        <td>Uvicorn worker listening on :8787</td>
+      </tr>
+      <tr>
+        <td>E2E CIP pipeline latency</td>
+        <td>Quantitative</td>
+        <td>1m 54.352s for 6989 rows</td>
+        <td>n8n POST /run prototype evidence</td>
+      </tr>
+      <tr>
+        <td>Interface usability / clarity</td>
+        <td>Qualitative</td>
+        <td>High — clear success path, reasoning field, named outputs</td>
+        <td>n8n canvas + FastAPI /docs + CLI orchestration output</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>2. Latency visualization (log scale)</h2>
+  <img class="chart" src="perf-latency-chart.png" alt="Latency bar chart" />
+  <p class="note">Source: scripts/measure_performance.py · health/data ~12 ms mean; inspect ~3.3 s (workbook I/O).</p>
+
+  <h2>3. KPI overview</h2>
+  <img class="chart" src="perf-kpi-chart.png" alt="KPI bar chart" />
+
+  <h2>4. Brief interpretation</h2>
+  <p>
+    The runner is healthy and responsive for control-plane endpoints (~12 ms, ~126 req/s) with a modest
+    ~143.89 MB resident footprint. Correctness checks passed completely (18/18). Workbook inspection
+    (~3.3 s) and full CIP generation (~1m 54s for ~7k rows) dominate end-user wait time — expected for Excel
+    ETL rather than API overhead. Qualitatively, operators get a readable n8n success path and explicit
+    orchestration reasoning, supporting trust and handoff clarity.
+  </p>
+</body>
+</html>

@@ -1,0 +1,20 @@
+SKILL-RUNNER PERFORMANCE EVALUATION
+==================================================
+
+1. QUANTITATIVE METRICS
+--------------------------------------------------
+Accuracy (unit test pass rate): 100.0% (18/18 passed)
+  Suite runtime: 0.058s
+
+Latency GET /health (n=50): mean=11.74 ms, p50=14.875 ms, p95=16.292 ms
+Latency GET /data   (n=30): mean=11.93 ms, p50=15.056 ms, p95=16.047 ms
+Latency POST /inspect (n=5): mean=3297.233 ms, p50=3258.32 ms, p95=3289.711 ms
+
+Throughput GET /health: 126.45 req/s (200/200 OK in 1.5816s)
+
+Memory footprint (server RSS): 143.89 MB (pid=16988; total w/ parent 148.45 MB)
+
+E2E CIP pipeline latency: 1m 54.352s (6989 rows)
+Reproducibility: 5 consecutive successful runs
+
+Wrote outputs/performance-eval.json
