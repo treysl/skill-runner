@@ -1,0 +1,60 @@
+Initializing n8n process
+n8n ready on ::, port 5678
+n8n Task Broker ready on 127.0.0.1, port 5679
+Failed to start Python task runner in internal mode. because its virtual environment is missing from this system. Launching a Python runner in internal mode is intended only for debugging and is not recommended for production. Users are encouraged to deploy in external mode. See: https://docs.n8n.io/hosting/configuration/task-runners/#setting-up-external-mode
+
+There are deprecations related to your n8n setup. Please take the recommended actions to update your configuration:
+ - N8N_UNVERIFIED_PACKAGES_ENABLED -> The default for this variable will change to `false` in a future version. Set it to `true` explicitly to keep installing unverified community packages.
+ - N8N_RUNNERS_TASK_TIMEOUT -> The default for this variable will be reduced from 300 (5 minutes) to 60 (1 minute) in a future version. Set it explicitly to keep your current task timeout.
+ - N8N_COMPRESSION_NODE_MAX_DECOMPRESSED_SIZE_BYTES -> The default for this variable will be reduced from 2 GiB to 256 MiB in a future version. Set it explicitly to keep your current limit.
+ - N8N_COMPRESSION_NODE_MAX_ZIP_ENTRIES -> The default for this variable will be reduced from 5000 to 1000 in a future version. Set it explicitly to keep your current limit.
+ - Running n8n outside a container is deprecated. Future versions will require running n8n via the official Docker image. See https://docs.n8n.io/deploy/host-n8n/install-options/install-with-docker
+
+[license SDK] cert state: expiresAt=2026-08-08T01:00:11.308Z terminatesAt=2051-07-09T02:27:57.933Z issuedAt=2026-07-29T01:00:11.348Z msToExpiry=343035766 msToTermination=786674702391 isValid=true isRenewalDue=false detachedEntitlementsCount=0 entitlements=1 enabledFeatures=6
+[license SDK] Skipping renewal on init: license cert is not due for renewal
+Registered runner "JS Task Runner" (ENOOAMKtr4fi4lnynFfo6) 
+Instance registered
+Discovered 4 cluster checks
+Version: 2.32.7
+Building workflow dependency index...
+
+Editor is now accessible via:
+http://localhost:5678
+Finished building workflow dependency index. Processed 0 draft workflows, 0 published workflows.
+User attempted to access a workflow without permissions
+[31m404 Could not load the workflow - you can only access workflows owned by you[39m
+User attempted to access a workflow without permissions
+[31m404 Could not load the workflow - you can only access workflows owned by you[39m
+NodeApiError
+NodeApiError
+    at ExecuteContext.execute (C:\Users\treyl\AppData\Local\npm-cache\_npx\a8a7eec953f1f314\node_modules\n8n-nodes-base\nodes\HttpRequest\V3\HttpRequestV3.node.ts:869:16)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at WorkflowExecute.executeNode (C:\Users\treyl\AppData\Local\npm-cache\_npx\a8a7eec953f1f314\node_modules\n8n\node_modules\n8n-core\src\execution-engine\workflow-execute.ts:1082:8)
+    at WorkflowExecute.runNode (C:\Users\treyl\AppData\Local\npm-cache\_npx\a8a7eec953f1f314\node_modules\n8n\node_modules\n8n-core\src\execution-engine\workflow-execute.ts:1382:11)
+    at C:\Users\treyl\AppData\Local\npm-cache\_npx\a8a7eec953f1f314\node_modules\n8n\node_modules\n8n-core\src\execution-engine\workflow-execute.ts:1855:27
+    at C:\Users\treyl\AppData\Local\npm-cache\_npx\a8a7eec953f1f314\node_modules\n8n\node_modules\n8n-core\src\execution-engine\workflow-execute.ts:2549:11
+
+timeout of 6000ms exceeded
+AxiosError: timeout of 6000ms exceeded
+    at createTimeoutError (C:\Users\treyl\AppData\Local\npm-cache\_npx\a8a7eec953f1f314\node_modules\axios\dist\node\axios.cjs:3562:14)
+    at RedirectableRequest.handleTimeout (C:\Users\treyl\AppData\Local\npm-cache\_npx\a8a7eec953f1f314\node_modules\axios\dist\node\axios.cjs:4080:15)
+    at RedirectableRequest.emit (node:events:508:28)
+    at Timeout._onTimeout (C:\Users\treyl\AppData\Local\npm-cache\_npx\a8a7eec953f1f314\node_modules\follow-redirects\index.js:233:12)
+    at listOnTimeout (node:internal/timers:608:17)
+    at processTimers (node:internal/timers:543:7)
+    at Axios.request (C:\Users\treyl\AppData\Local\npm-cache\_npx\a8a7eec953f1f314\node_modules\axios\dist\node\axios.cjs:5427:41)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at invokeAxios (C:\Users\treyl\AppData\Local\npm-cache\_npx\a8a7eec953f1f314\node_modules\@n8n\backend-network\src\http\axios\invoke.ts:15:10)
+    at httpRequest (C:\Users\treyl\AppData\Local\npm-cache\_npx\a8a7eec953f1f314\node_modules\@n8n\backend-network\src\http\axios\request.ts:211:5)
+    at Object.request (C:\Users\treyl\AppData\Local\npm-cache\_npx\a8a7eec953f1f314\node_modules\@n8n\backend-network\src\http\outbound-http.ts:188:12)
+    at paginatedRequest (C:\Users\treyl\AppData\Local\npm-cache\_npx\a8a7eec953f1f314\node_modules\n8n\src\utils\strapi-utils.ts:87:15)
+    at getCommunityNodeTypes (C:\Users\treyl\AppData\Local\npm-cache\_npx\a8a7eec953f1f314\node_modules\n8n\src\modules\community-packages\community-node-types-utils.ts:54:9)
+    at CommunityNodeTypesService.fetchNodeTypes (C:\Users\treyl\AppData\Local\npm-cache\_npx\a8a7eec953f1f314\node_modules\n8n\src\modules\community-packages\community-node-types.service.ts:93:13)
+    at CommunityNodeTypesService.getCommunityNodeTypes (C:\Users\treyl\AppData\Local\npm-cache\_npx\a8a7eec953f1f314\node_modules\n8n\src\modules\community-packages\community-node-types.service.ts:213:4)
+    at CommunityNodeTypesController.getCommunityNodeTypes (C:\Users\treyl\AppData\Local\npm-cache\_npx\a8a7eec953f1f314\node_modules\n8n\src\modules\community-packages\community-node-types.controller.ts:18:10)
+
+Error fetching from Strapi API (https://api-staging.n8n.io/api/community-nodes): timeout of 6000ms exceeded
+User attempted to access a workflow without permissions
+[31m404 Could not load the workflow - you can only access workflows owned by you[39m
+User attempted to access a workflow without permissions
+[31m404 Could not load the workflow - you can only access workflows owned by you[39m
