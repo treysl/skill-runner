@@ -111,9 +111,10 @@
 - [x] OpenRouter orchestration with markdown-driven defaults
 - [x] n8n workflow (`n8n/cip-report-pipeline.json`)
 - [x] First successful CIP report generated from anonymized sample data
-- [ ] Run log: data source, skill package, script version, timestamp per execution
+- [x] Run log: data source, skill package, script version, timestamp per execution
 - [x] Five consecutive reproducibility runs documented
 - [ ] Before/after efficiency comparison documented
+- [ ] Golden-workbook financial reconciliation completed (reference workbook pending external transfer)
 
 ---
 
@@ -145,7 +146,7 @@
 - [ ] `.env.example` contains placeholders only (no live secrets)
 - [ ] Private GitHub repository with role-based access
 - [ ] Credentials in environment variables / secrets manager — not in code
-- [ ] Pipeline run logging for audit (source, skill, version, timestamp)
+- [x] Pipeline run logging for audit (source, skill, version, timestamp)
 - [ ] Human review required before sharing reports outside project team
 - [ ] Least-privilege access to data folders and outputs
 
@@ -188,4 +189,3 @@
 | 2026-06-28 | First end-to-end n8n run | PASS - anonymized source produced the CIP workbook |
 | 2026-08-09 | Construction-only + YTD run | PASS - 6,989 input rows; 133.818 seconds; 9-sheet output |
 | 2026-07-15 | Five-run reproducibility test | PASS - five consistent outputs documented in `docs/images/goal2-reproducibility-outputs.png` |
-

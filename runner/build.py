@@ -5,7 +5,14 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from runner.config import DEFAULT_CLIENT_NAME, DEFAULT_USER, LOGO_PATH, OUTPUT_DIR, get_build_script
+from runner.config import (
+    DEFAULT_CLIENT_NAME,
+    DEFAULT_USER,
+    LOGO_PATH,
+    OUTPUT_DIR,
+    OUTPUT_FILENAME_PREFIX,
+    get_build_script,
+)
 
 
 def _safe_name(value: str) -> str:
@@ -13,11 +20,11 @@ def _safe_name(value: str) -> str:
     return cleaned.strip().replace(" ", "_") or "Client"
 
 
-def build_output_path(client_name: str) -> Path:
+def build_output_path() -> Path:
     from datetime import datetime
 
     stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    filename = f"{_safe_name(client_name)}_CIP_Report_{stamp}.xlsx"
+    filename = f"{_safe_name(OUTPUT_FILENAME_PREFIX)}_{stamp}.xlsx"
     return OUTPUT_DIR / filename
 
 
@@ -66,7 +73,7 @@ def run_build(config: dict[str, Any], input_file: Path, output_file: Path | None
     if not build_script.exists():
         raise FileNotFoundError(f"Build script not found: {build_script}")
 
-    output_path = output_file or build_output_path(str(config.get("client_name", DEFAULT_CLIENT_NAME)))
+    output_path = output_file or build_output_path()
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     cmd = config_to_cli_args(config, input_file, output_path, build_script)

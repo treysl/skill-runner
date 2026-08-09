@@ -1,0 +1,1098 @@
+{
+  "schema_version": 1,
+  "scope": {
+    "directory": "outputs",
+    "pattern": "CIP_Report_*.xlsx",
+    "files_analyzed": 14,
+    "baseline": "CIP_Report_20260809_122617.xlsx"
+  },
+  "summary": {
+    "structurally_consistent": false,
+    "structural_signature_groups": 2,
+    "latest_structure_files": 12,
+    "latest_structure_share_pct": 85.7,
+    "normalized_package_groups": 14,
+    "size_bytes_min": 3923690,
+    "size_bytes_max": 3973149,
+    "size_bytes_mean": 3931428.1,
+    "size_range_pct_of_mean": 1.258
+  },
+  "structural_groups": [
+    {
+      "signature": "FC5F7F9AE5BCB138EFFB4FD3AD5D2C3697801104F38656DA4202394C70870482",
+      "count": 12,
+      "files": [
+        "CIP_Report_20260628_204810.xlsx",
+        "CIP_Report_20260628_211054.xlsx",
+        "CIP_Report_20260705_105439.xlsx",
+        "CIP_Report_20260708_205834.xlsx",
+        "CIP_Report_20260714_211446.xlsx",
+        "CIP_Report_20260715_202405.xlsx",
+        "CIP_Report_20260715_202805.xlsx",
+        "CIP_Report_20260728_215412.xlsx",
+        "CIP_Report_20260803_205444.xlsx",
+        "CIP_Report_20260809_112243.xlsx",
+        "CIP_Report_20260809_114002.xlsx",
+        "CIP_Report_20260809_122617.xlsx"
+      ]
+    },
+    {
+      "signature": "16CDD9CF5DC1E0BB2595F0AEAAFCA7E2E4551CDD55EB0E273FE3F8DD13B4C7DB",
+      "count": 2,
+      "files": [
+        "CIP_Report_20260628_204358.xlsx",
+        "CIP_Report_20260628_210626.xlsx"
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "filename": "CIP_Report_20260628_204358.xlsx",
+      "run_timestamp": "20260628_204358",
+      "size_bytes": 3973133,
+      "sha256": "17DD5FB1597B75ED2DBE358729927A67F954B4DE27247E7A321D8497B7F060DC",
+      "worksheet_count": 9,
+      "worksheets": [
+        "Proprietary Disclosure",
+        "Dashboard",
+        "In Process",
+        "In Process By Property",
+        "Completed",
+        "Completed Dashboard View",
+        "Complete Overview",
+        "Table",
+        "Version History"
+      ],
+      "worksheet_dimensions": {
+        "Proprietary Disclosure": {
+          "rows": 24,
+          "columns": 2
+        },
+        "Dashboard": {
+          "rows": 70,
+          "columns": 14
+        },
+        "In Process": {
+          "rows": 106,
+          "columns": 47
+        },
+        "In Process By Property": {
+          "rows": 95,
+          "columns": 39
+        },
+        "Completed": {
+          "rows": 121,
+          "columns": 48
+        },
+        "Completed Dashboard View": {
+          "rows": 35,
+          "columns": 6
+        },
+        "Complete Overview": {
+          "rows": 26,
+          "columns": 22
+        },
+        "Table": {
+          "rows": 6990,
+          "columns": 111
+        },
+        "Version History": {
+          "rows": 4,
+          "columns": 3
+        }
+      },
+      "structural_signature": "16CDD9CF5DC1E0BB2595F0AEAAFCA7E2E4551CDD55EB0E273FE3F8DD13B4C7DB",
+      "normalized_package_sha256": "FB6B0EB8A4EEFC418959A7D3894A41E3E24CF6B9FD3749CEA9B4F6150BFB55D5",
+      "excluded_members": [
+        "docProps/core.xml",
+        "xl/calcChain.xml",
+        "xl/worksheets/sheet9.xml"
+      ],
+      "changed_members_vs_latest": [
+        "docProps/core.xml",
+        "xl/media/image1.png",
+        "xl/styles.xml",
+        "xl/workbook.xml",
+        "xl/worksheets/sheet1.xml",
+        "xl/worksheets/sheet2.xml",
+        "xl/worksheets/sheet3.xml",
+        "xl/worksheets/sheet4.xml",
+        "xl/worksheets/sheet5.xml",
+        "xl/worksheets/sheet6.xml",
+        "xl/worksheets/sheet7.xml",
+        "xl/worksheets/sheet8.xml",
+        "xl/worksheets/sheet9.xml"
+      ]
+    },
+    {
+      "filename": "CIP_Report_20260628_204810.xlsx",
+      "run_timestamp": "20260628_204810",
+      "size_bytes": 3923770,
+      "sha256": "50B010A11AF9080BE997BA14526568100D10738D9DFF44B93D16EE58406FE970",
+      "worksheet_count": 9,
+      "worksheets": [
+        "Proprietary Disclosure",
+        "Dashboard",
+        "In Process",
+        "In Process By Property",
+        "Completed",
+        "Completed Dashboard View",
+        "Complete Overview",
+        "Table",
+        "Version History"
+      ],
+      "worksheet_dimensions": {
+        "Proprietary Disclosure": {
+          "rows": 24,
+          "columns": 2
+        },
+        "Dashboard": {
+          "rows": 52,
+          "columns": 14
+        },
+        "In Process": {
+          "rows": 56,
+          "columns": 47
+        },
+        "In Process By Property": {
+          "rows": 50,
+          "columns": 39
+        },
+        "Completed": {
+          "rows": 36,
+          "columns": 48
+        },
+        "Completed Dashboard View": {
+          "rows": 31,
+          "columns": 6
+        },
+        "Complete Overview": {
+          "rows": 26,
+          "columns": 22
+        },
+        "Table": {
+          "rows": 6990,
+          "columns": 111
+        },
+        "Version History": {
+          "rows": 4,
+          "columns": 3
+        }
+      },
+      "structural_signature": "FC5F7F9AE5BCB138EFFB4FD3AD5D2C3697801104F38656DA4202394C70870482",
+      "normalized_package_sha256": "F4E63DBA533DD1F22C38C664063DC828440DD657CFC1E6FB86C008DBE1F9DC09",
+      "excluded_members": [
+        "docProps/core.xml",
+        "xl/calcChain.xml",
+        "xl/worksheets/sheet9.xml"
+      ],
+      "changed_members_vs_latest": [
+        "docProps/core.xml",
+        "xl/media/image1.png",
+        "xl/worksheets/sheet1.xml",
+        "xl/worksheets/sheet2.xml",
+        "xl/worksheets/sheet3.xml",
+        "xl/worksheets/sheet4.xml",
+        "xl/worksheets/sheet5.xml",
+        "xl/worksheets/sheet6.xml",
+        "xl/worksheets/sheet7.xml",
+        "xl/worksheets/sheet9.xml"
+      ]
+    },
+    {
+      "filename": "CIP_Report_20260628_210626.xlsx",
+      "run_timestamp": "20260628_210626",
+      "size_bytes": 3973149,
+      "sha256": "55B1753DF261466084BE68089EC22F310BA150C4686DAAE22622D33F23E0A8EE",
+      "worksheet_count": 9,
+      "worksheets": [
+        "Proprietary Disclosure",
+        "Dashboard",
+        "In Process",
+        "In Process By Property",
+        "Completed",
+        "Completed Dashboard View",
+        "Complete Overview",
+        "Table",
+        "Version History"
+      ],
+      "worksheet_dimensions": {
+        "Proprietary Disclosure": {
+          "rows": 24,
+          "columns": 2
+        },
+        "Dashboard": {
+          "rows": 70,
+          "columns": 14
+        },
+        "In Process": {
+          "rows": 106,
+          "columns": 47
+        },
+        "In Process By Property": {
+          "rows": 95,
+          "columns": 39
+        },
+        "Completed": {
+          "rows": 121,
+          "columns": 48
+        },
+        "Completed Dashboard View": {
+          "rows": 35,
+          "columns": 6
+        },
+        "Complete Overview": {
+          "rows": 26,
+          "columns": 22
+        },
+        "Table": {
+          "rows": 6990,
+          "columns": 111
+        },
+        "Version History": {
+          "rows": 4,
+          "columns": 3
+        }
+      },
+      "structural_signature": "16CDD9CF5DC1E0BB2595F0AEAAFCA7E2E4551CDD55EB0E273FE3F8DD13B4C7DB",
+      "normalized_package_sha256": "3E180D454903E63315A9DB5EA6AB8FF2908316AC9A494E817107554A838F7C27",
+      "excluded_members": [
+        "docProps/core.xml",
+        "xl/calcChain.xml",
+        "xl/worksheets/sheet9.xml"
+      ],
+      "changed_members_vs_latest": [
+        "docProps/core.xml",
+        "xl/media/image1.png",
+        "xl/styles.xml",
+        "xl/workbook.xml",
+        "xl/worksheets/sheet1.xml",
+        "xl/worksheets/sheet2.xml",
+        "xl/worksheets/sheet3.xml",
+        "xl/worksheets/sheet4.xml",
+        "xl/worksheets/sheet5.xml",
+        "xl/worksheets/sheet6.xml",
+        "xl/worksheets/sheet7.xml",
+        "xl/worksheets/sheet8.xml",
+        "xl/worksheets/sheet9.xml"
+      ]
+    },
+    {
+      "filename": "CIP_Report_20260628_211054.xlsx",
+      "run_timestamp": "20260628_211054",
+      "size_bytes": 3923756,
+      "sha256": "1D392A9646C28089D02902FD34B485EC1E66CECFC519C1406026D6DB5528148F",
+      "worksheet_count": 9,
+      "worksheets": [
+        "Proprietary Disclosure",
+        "Dashboard",
+        "In Process",
+        "In Process By Property",
+        "Completed",
+        "Completed Dashboard View",
+        "Complete Overview",
+        "Table",
+        "Version History"
+      ],
+      "worksheet_dimensions": {
+        "Proprietary Disclosure": {
+          "rows": 24,
+          "columns": 2
+        },
+        "Dashboard": {
+          "rows": 52,
+          "columns": 14
+        },
+        "In Process": {
+          "rows": 56,
+          "columns": 47
+        },
+        "In Process By Property": {
+          "rows": 50,
+          "columns": 39
+        },
+        "Completed": {
+          "rows": 36,
+          "columns": 48
+        },
+        "Completed Dashboard View": {
+          "rows": 31,
+          "columns": 6
+        },
+        "Complete Overview": {
+          "rows": 26,
+          "columns": 22
+        },
+        "Table": {
+          "rows": 6990,
+          "columns": 111
+        },
+        "Version History": {
+          "rows": 4,
+          "columns": 3
+        }
+      },
+      "structural_signature": "FC5F7F9AE5BCB138EFFB4FD3AD5D2C3697801104F38656DA4202394C70870482",
+      "normalized_package_sha256": "D39CD93457E8CD175C8812770727ED2F02F8DD3ECB6AD15A43C574BCEB91A870",
+      "excluded_members": [
+        "docProps/core.xml",
+        "xl/calcChain.xml",
+        "xl/worksheets/sheet9.xml"
+      ],
+      "changed_members_vs_latest": [
+        "docProps/core.xml",
+        "xl/media/image1.png",
+        "xl/worksheets/sheet1.xml",
+        "xl/worksheets/sheet2.xml",
+        "xl/worksheets/sheet3.xml",
+        "xl/worksheets/sheet4.xml",
+        "xl/worksheets/sheet5.xml",
+        "xl/worksheets/sheet6.xml",
+        "xl/worksheets/sheet7.xml",
+        "xl/worksheets/sheet9.xml"
+      ]
+    },
+    {
+      "filename": "CIP_Report_20260705_105439.xlsx",
+      "run_timestamp": "20260705_105439",
+      "size_bytes": 3923704,
+      "sha256": "AD78D4F53D5F8AD16C894CBFCACB1A0760F646CFD7EEE9B4356EE61C219724E5",
+      "worksheet_count": 9,
+      "worksheets": [
+        "Proprietary Disclosure",
+        "Dashboard",
+        "In Process",
+        "In Process By Property",
+        "Completed",
+        "Completed Dashboard View",
+        "Complete Overview",
+        "Table",
+        "Version History"
+      ],
+      "worksheet_dimensions": {
+        "Proprietary Disclosure": {
+          "rows": 24,
+          "columns": 2
+        },
+        "Dashboard": {
+          "rows": 52,
+          "columns": 14
+        },
+        "In Process": {
+          "rows": 56,
+          "columns": 47
+        },
+        "In Process By Property": {
+          "rows": 50,
+          "columns": 39
+        },
+        "Completed": {
+          "rows": 36,
+          "columns": 48
+        },
+        "Completed Dashboard View": {
+          "rows": 31,
+          "columns": 6
+        },
+        "Complete Overview": {
+          "rows": 26,
+          "columns": 22
+        },
+        "Table": {
+          "rows": 6990,
+          "columns": 111
+        },
+        "Version History": {
+          "rows": 4,
+          "columns": 3
+        }
+      },
+      "structural_signature": "FC5F7F9AE5BCB138EFFB4FD3AD5D2C3697801104F38656DA4202394C70870482",
+      "normalized_package_sha256": "BCE3207D9A5B12F48F046B0E45AC8DCE3AE4EDC4FA0CF025221303A34D1349D7",
+      "excluded_members": [
+        "docProps/core.xml",
+        "xl/calcChain.xml",
+        "xl/worksheets/sheet9.xml"
+      ],
+      "changed_members_vs_latest": [
+        "docProps/core.xml",
+        "xl/media/image1.png",
+        "xl/worksheets/sheet1.xml",
+        "xl/worksheets/sheet2.xml",
+        "xl/worksheets/sheet3.xml",
+        "xl/worksheets/sheet4.xml",
+        "xl/worksheets/sheet5.xml",
+        "xl/worksheets/sheet6.xml",
+        "xl/worksheets/sheet7.xml",
+        "xl/worksheets/sheet9.xml"
+      ]
+    },
+    {
+      "filename": "CIP_Report_20260708_205834.xlsx",
+      "run_timestamp": "20260708_205834",
+      "size_bytes": 3923696,
+      "sha256": "EE0B295CAFD533F82ADE59F87E52576E9C0E55470264B1FFBEF8EE59AD8F0CC8",
+      "worksheet_count": 9,
+      "worksheets": [
+        "Proprietary Disclosure",
+        "Dashboard",
+        "In Process",
+        "In Process By Property",
+        "Completed",
+        "Completed Dashboard View",
+        "Complete Overview",
+        "Table",
+        "Version History"
+      ],
+      "worksheet_dimensions": {
+        "Proprietary Disclosure": {
+          "rows": 24,
+          "columns": 2
+        },
+        "Dashboard": {
+          "rows": 52,
+          "columns": 14
+        },
+        "In Process": {
+          "rows": 56,
+          "columns": 47
+        },
+        "In Process By Property": {
+          "rows": 50,
+          "columns": 39
+        },
+        "Completed": {
+          "rows": 36,
+          "columns": 48
+        },
+        "Completed Dashboard View": {
+          "rows": 31,
+          "columns": 6
+        },
+        "Complete Overview": {
+          "rows": 26,
+          "columns": 22
+        },
+        "Table": {
+          "rows": 6990,
+          "columns": 111
+        },
+        "Version History": {
+          "rows": 4,
+          "columns": 3
+        }
+      },
+      "structural_signature": "FC5F7F9AE5BCB138EFFB4FD3AD5D2C3697801104F38656DA4202394C70870482",
+      "normalized_package_sha256": "4C9615BBBF67DBDBF05773F7A1AD312788BC9E1B2B15118B9EB9EC271CEB2652",
+      "excluded_members": [
+        "docProps/core.xml",
+        "xl/calcChain.xml",
+        "xl/worksheets/sheet9.xml"
+      ],
+      "changed_members_vs_latest": [
+        "docProps/core.xml",
+        "xl/media/image1.png",
+        "xl/worksheets/sheet1.xml",
+        "xl/worksheets/sheet2.xml",
+        "xl/worksheets/sheet3.xml",
+        "xl/worksheets/sheet4.xml",
+        "xl/worksheets/sheet5.xml",
+        "xl/worksheets/sheet6.xml",
+        "xl/worksheets/sheet7.xml",
+        "xl/worksheets/sheet9.xml"
+      ]
+    },
+    {
+      "filename": "CIP_Report_20260714_211446.xlsx",
+      "run_timestamp": "20260714_211446",
+      "size_bytes": 3923690,
+      "sha256": "1E8145281BD0146DFFF99E9ED681E7EC4F9A524D9FB2F734CA4D35564A6A37AE",
+      "worksheet_count": 9,
+      "worksheets": [
+        "Proprietary Disclosure",
+        "Dashboard",
+        "In Process",
+        "In Process By Property",
+        "Completed",
+        "Completed Dashboard View",
+        "Complete Overview",
+        "Table",
+        "Version History"
+      ],
+      "worksheet_dimensions": {
+        "Proprietary Disclosure": {
+          "rows": 24,
+          "columns": 2
+        },
+        "Dashboard": {
+          "rows": 52,
+          "columns": 14
+        },
+        "In Process": {
+          "rows": 56,
+          "columns": 47
+        },
+        "In Process By Property": {
+          "rows": 50,
+          "columns": 39
+        },
+        "Completed": {
+          "rows": 36,
+          "columns": 48
+        },
+        "Completed Dashboard View": {
+          "rows": 31,
+          "columns": 6
+        },
+        "Complete Overview": {
+          "rows": 26,
+          "columns": 22
+        },
+        "Table": {
+          "rows": 6990,
+          "columns": 111
+        },
+        "Version History": {
+          "rows": 4,
+          "columns": 3
+        }
+      },
+      "structural_signature": "FC5F7F9AE5BCB138EFFB4FD3AD5D2C3697801104F38656DA4202394C70870482",
+      "normalized_package_sha256": "079438765C6DDCDB90B056A02E76112E798422A126AD7B3C48636910030A57BE",
+      "excluded_members": [
+        "docProps/core.xml",
+        "xl/calcChain.xml",
+        "xl/worksheets/sheet9.xml"
+      ],
+      "changed_members_vs_latest": [
+        "docProps/core.xml",
+        "xl/media/image1.png",
+        "xl/worksheets/sheet1.xml",
+        "xl/worksheets/sheet2.xml",
+        "xl/worksheets/sheet3.xml",
+        "xl/worksheets/sheet4.xml",
+        "xl/worksheets/sheet5.xml",
+        "xl/worksheets/sheet6.xml",
+        "xl/worksheets/sheet7.xml",
+        "xl/worksheets/sheet9.xml"
+      ]
+    },
+    {
+      "filename": "CIP_Report_20260715_202405.xlsx",
+      "run_timestamp": "20260715_202405",
+      "size_bytes": 3923690,
+      "sha256": "F1F51CC8F216F9E80763A00E05B94711BD732F20C42B24EED77E4720BA333840",
+      "worksheet_count": 9,
+      "worksheets": [
+        "Proprietary Disclosure",
+        "Dashboard",
+        "In Process",
+        "In Process By Property",
+        "Completed",
+        "Completed Dashboard View",
+        "Complete Overview",
+        "Table",
+        "Version History"
+      ],
+      "worksheet_dimensions": {
+        "Proprietary Disclosure": {
+          "rows": 24,
+          "columns": 2
+        },
+        "Dashboard": {
+          "rows": 52,
+          "columns": 14
+        },
+        "In Process": {
+          "rows": 56,
+          "columns": 47
+        },
+        "In Process By Property": {
+          "rows": 50,
+          "columns": 39
+        },
+        "Completed": {
+          "rows": 36,
+          "columns": 48
+        },
+        "Completed Dashboard View": {
+          "rows": 31,
+          "columns": 6
+        },
+        "Complete Overview": {
+          "rows": 26,
+          "columns": 22
+        },
+        "Table": {
+          "rows": 6990,
+          "columns": 111
+        },
+        "Version History": {
+          "rows": 4,
+          "columns": 3
+        }
+      },
+      "structural_signature": "FC5F7F9AE5BCB138EFFB4FD3AD5D2C3697801104F38656DA4202394C70870482",
+      "normalized_package_sha256": "C9EAF81B8960C07BDD2250C6CB1625646DD504F3FDF3294FD98B4709B79FD294",
+      "excluded_members": [
+        "docProps/core.xml",
+        "xl/calcChain.xml",
+        "xl/worksheets/sheet9.xml"
+      ],
+      "changed_members_vs_latest": [
+        "docProps/core.xml",
+        "xl/media/image1.png",
+        "xl/worksheets/sheet1.xml",
+        "xl/worksheets/sheet2.xml",
+        "xl/worksheets/sheet3.xml",
+        "xl/worksheets/sheet4.xml",
+        "xl/worksheets/sheet5.xml",
+        "xl/worksheets/sheet6.xml",
+        "xl/worksheets/sheet7.xml",
+        "xl/worksheets/sheet9.xml"
+      ]
+    },
+    {
+      "filename": "CIP_Report_20260715_202805.xlsx",
+      "run_timestamp": "20260715_202805",
+      "size_bytes": 3923708,
+      "sha256": "8782A32CF6F4B4E1268CF88611CC78EF5AFD85DD2E80A4162EC29DFE096924CA",
+      "worksheet_count": 9,
+      "worksheets": [
+        "Proprietary Disclosure",
+        "Dashboard",
+        "In Process",
+        "In Process By Property",
+        "Completed",
+        "Completed Dashboard View",
+        "Complete Overview",
+        "Table",
+        "Version History"
+      ],
+      "worksheet_dimensions": {
+        "Proprietary Disclosure": {
+          "rows": 24,
+          "columns": 2
+        },
+        "Dashboard": {
+          "rows": 52,
+          "columns": 14
+        },
+        "In Process": {
+          "rows": 56,
+          "columns": 47
+        },
+        "In Process By Property": {
+          "rows": 50,
+          "columns": 39
+        },
+        "Completed": {
+          "rows": 36,
+          "columns": 48
+        },
+        "Completed Dashboard View": {
+          "rows": 31,
+          "columns": 6
+        },
+        "Complete Overview": {
+          "rows": 26,
+          "columns": 22
+        },
+        "Table": {
+          "rows": 6990,
+          "columns": 111
+        },
+        "Version History": {
+          "rows": 4,
+          "columns": 3
+        }
+      },
+      "structural_signature": "FC5F7F9AE5BCB138EFFB4FD3AD5D2C3697801104F38656DA4202394C70870482",
+      "normalized_package_sha256": "68C1C49ECA743D70880FD9328AF520B32BE4A6AC24D8703F82FDDE75223EF346",
+      "excluded_members": [
+        "docProps/core.xml",
+        "xl/calcChain.xml",
+        "xl/worksheets/sheet9.xml"
+      ],
+      "changed_members_vs_latest": [
+        "docProps/core.xml",
+        "xl/media/image1.png",
+        "xl/worksheets/sheet1.xml",
+        "xl/worksheets/sheet2.xml",
+        "xl/worksheets/sheet3.xml",
+        "xl/worksheets/sheet4.xml",
+        "xl/worksheets/sheet5.xml",
+        "xl/worksheets/sheet6.xml",
+        "xl/worksheets/sheet7.xml",
+        "xl/worksheets/sheet9.xml"
+      ]
+    },
+    {
+      "filename": "CIP_Report_20260728_215412.xlsx",
+      "run_timestamp": "20260728_215412",
+      "size_bytes": 3923720,
+      "sha256": "C652410493A8FB082B8CB55BA99EA27E4D9EFF18990F32F31C4F648565F204B9",
+      "worksheet_count": 9,
+      "worksheets": [
+        "Proprietary Disclosure",
+        "Dashboard",
+        "In Process",
+        "In Process By Property",
+        "Completed",
+        "Completed Dashboard View",
+        "Complete Overview",
+        "Table",
+        "Version History"
+      ],
+      "worksheet_dimensions": {
+        "Proprietary Disclosure": {
+          "rows": 24,
+          "columns": 2
+        },
+        "Dashboard": {
+          "rows": 52,
+          "columns": 14
+        },
+        "In Process": {
+          "rows": 56,
+          "columns": 47
+        },
+        "In Process By Property": {
+          "rows": 50,
+          "columns": 39
+        },
+        "Completed": {
+          "rows": 36,
+          "columns": 48
+        },
+        "Completed Dashboard View": {
+          "rows": 31,
+          "columns": 6
+        },
+        "Complete Overview": {
+          "rows": 26,
+          "columns": 22
+        },
+        "Table": {
+          "rows": 6990,
+          "columns": 111
+        },
+        "Version History": {
+          "rows": 4,
+          "columns": 3
+        }
+      },
+      "structural_signature": "FC5F7F9AE5BCB138EFFB4FD3AD5D2C3697801104F38656DA4202394C70870482",
+      "normalized_package_sha256": "4C31F1B313DEDD74B240E8DEB4A912031AF86ABF27AF54EDC580E2C4780F4522",
+      "excluded_members": [
+        "docProps/core.xml",
+        "xl/calcChain.xml",
+        "xl/worksheets/sheet9.xml"
+      ],
+      "changed_members_vs_latest": [
+        "docProps/core.xml",
+        "xl/media/image1.png",
+        "xl/worksheets/sheet1.xml",
+        "xl/worksheets/sheet2.xml",
+        "xl/worksheets/sheet3.xml",
+        "xl/worksheets/sheet4.xml",
+        "xl/worksheets/sheet5.xml",
+        "xl/worksheets/sheet6.xml",
+        "xl/worksheets/sheet7.xml",
+        "xl/worksheets/sheet9.xml"
+      ]
+    },
+    {
+      "filename": "CIP_Report_20260803_205444.xlsx",
+      "run_timestamp": "20260803_205444",
+      "size_bytes": 3925979,
+      "sha256": "EE2F0608EBF344AC9B3FC9BC4CFD38875802A30DC70CA7B42D806E9187935A86",
+      "worksheet_count": 9,
+      "worksheets": [
+        "Proprietary Disclosure",
+        "Dashboard",
+        "In Process",
+        "In Process By Property",
+        "Completed",
+        "Completed Dashboard View",
+        "Complete Overview",
+        "Table",
+        "Version History"
+      ],
+      "worksheet_dimensions": {
+        "Proprietary Disclosure": {
+          "rows": 24,
+          "columns": 2
+        },
+        "Dashboard": {
+          "rows": 52,
+          "columns": 14
+        },
+        "In Process": {
+          "rows": 56,
+          "columns": 47
+        },
+        "In Process By Property": {
+          "rows": 50,
+          "columns": 39
+        },
+        "Completed": {
+          "rows": 36,
+          "columns": 48
+        },
+        "Completed Dashboard View": {
+          "rows": 31,
+          "columns": 6
+        },
+        "Complete Overview": {
+          "rows": 26,
+          "columns": 22
+        },
+        "Table": {
+          "rows": 6990,
+          "columns": 111
+        },
+        "Version History": {
+          "rows": 4,
+          "columns": 3
+        }
+      },
+      "structural_signature": "FC5F7F9AE5BCB138EFFB4FD3AD5D2C3697801104F38656DA4202394C70870482",
+      "normalized_package_sha256": "286A37635E1AB3564CEB1C28B85B1ADC9628E3D7C299A564101435441D87AEE3",
+      "excluded_members": [
+        "docProps/core.xml",
+        "xl/calcChain.xml",
+        "xl/worksheets/sheet9.xml"
+      ],
+      "changed_members_vs_latest": [
+        "docProps/core.xml",
+        "xl/worksheets/sheet1.xml",
+        "xl/worksheets/sheet2.xml",
+        "xl/worksheets/sheet3.xml",
+        "xl/worksheets/sheet4.xml",
+        "xl/worksheets/sheet5.xml",
+        "xl/worksheets/sheet6.xml",
+        "xl/worksheets/sheet7.xml",
+        "xl/worksheets/sheet9.xml"
+      ]
+    },
+    {
+      "filename": "CIP_Report_20260809_112243.xlsx",
+      "run_timestamp": "20260809_112243",
+      "size_bytes": 3926024,
+      "sha256": "46089BA6F9A57783C8670FC674385F12828FAF05648462B40BE462406440A230",
+      "worksheet_count": 9,
+      "worksheets": [
+        "Proprietary Disclosure",
+        "Dashboard",
+        "In Process",
+        "In Process By Property",
+        "Completed",
+        "Completed Dashboard View",
+        "Complete Overview",
+        "Table",
+        "Version History"
+      ],
+      "worksheet_dimensions": {
+        "Proprietary Disclosure": {
+          "rows": 24,
+          "columns": 2
+        },
+        "Dashboard": {
+          "rows": 52,
+          "columns": 14
+        },
+        "In Process": {
+          "rows": 56,
+          "columns": 47
+        },
+        "In Process By Property": {
+          "rows": 50,
+          "columns": 39
+        },
+        "Completed": {
+          "rows": 36,
+          "columns": 48
+        },
+        "Completed Dashboard View": {
+          "rows": 31,
+          "columns": 6
+        },
+        "Complete Overview": {
+          "rows": 26,
+          "columns": 22
+        },
+        "Table": {
+          "rows": 6990,
+          "columns": 111
+        },
+        "Version History": {
+          "rows": 4,
+          "columns": 3
+        }
+      },
+      "structural_signature": "FC5F7F9AE5BCB138EFFB4FD3AD5D2C3697801104F38656DA4202394C70870482",
+      "normalized_package_sha256": "BAA5E695DAB49D092D15C6D9915D5D519144F2285D508FFE5ED25E9C85D78966",
+      "excluded_members": [
+        "docProps/core.xml",
+        "xl/calcChain.xml",
+        "xl/worksheets/sheet9.xml"
+      ],
+      "changed_members_vs_latest": [
+        "docProps/core.xml",
+        "xl/worksheets/sheet1.xml",
+        "xl/worksheets/sheet2.xml",
+        "xl/worksheets/sheet3.xml",
+        "xl/worksheets/sheet4.xml",
+        "xl/worksheets/sheet5.xml",
+        "xl/worksheets/sheet6.xml",
+        "xl/worksheets/sheet7.xml",
+        "xl/worksheets/sheet9.xml"
+      ]
+    },
+    {
+      "filename": "CIP_Report_20260809_114002.xlsx",
+      "run_timestamp": "20260809_114002",
+      "size_bytes": 3925992,
+      "sha256": "F89D692965407E3FB6BC7FEFCD4BE1A2FBC727C1BBE642ABDB4F47C8BEC9CE48",
+      "worksheet_count": 9,
+      "worksheets": [
+        "Proprietary Disclosure",
+        "Dashboard",
+        "In Process",
+        "In Process By Property",
+        "Completed",
+        "Completed Dashboard View",
+        "Complete Overview",
+        "Table",
+        "Version History"
+      ],
+      "worksheet_dimensions": {
+        "Proprietary Disclosure": {
+          "rows": 24,
+          "columns": 2
+        },
+        "Dashboard": {
+          "rows": 52,
+          "columns": 14
+        },
+        "In Process": {
+          "rows": 56,
+          "columns": 47
+        },
+        "In Process By Property": {
+          "rows": 50,
+          "columns": 39
+        },
+        "Completed": {
+          "rows": 36,
+          "columns": 48
+        },
+        "Completed Dashboard View": {
+          "rows": 31,
+          "columns": 6
+        },
+        "Complete Overview": {
+          "rows": 26,
+          "columns": 22
+        },
+        "Table": {
+          "rows": 6990,
+          "columns": 111
+        },
+        "Version History": {
+          "rows": 4,
+          "columns": 3
+        }
+      },
+      "structural_signature": "FC5F7F9AE5BCB138EFFB4FD3AD5D2C3697801104F38656DA4202394C70870482",
+      "normalized_package_sha256": "9BF5FB0EFB60384DF7B01084F8C35E870C55991FE0037E8F761357BC46B5A824",
+      "excluded_members": [
+        "docProps/core.xml",
+        "xl/calcChain.xml",
+        "xl/worksheets/sheet9.xml"
+      ],
+      "changed_members_vs_latest": [
+        "docProps/core.xml",
+        "xl/worksheets/sheet1.xml",
+        "xl/worksheets/sheet2.xml",
+        "xl/worksheets/sheet3.xml",
+        "xl/worksheets/sheet4.xml",
+        "xl/worksheets/sheet5.xml",
+        "xl/worksheets/sheet6.xml",
+        "xl/worksheets/sheet7.xml",
+        "xl/worksheets/sheet9.xml"
+      ]
+    },
+    {
+      "filename": "CIP_Report_20260809_122617.xlsx",
+      "run_timestamp": "20260809_122617",
+      "size_bytes": 3925982,
+      "sha256": "B555107C43B37EF6B3EB91E9EB32D5EB266D2A86D9A9E69F004220F512007390",
+      "worksheet_count": 9,
+      "worksheets": [
+        "Proprietary Disclosure",
+        "Dashboard",
+        "In Process",
+        "In Process By Property",
+        "Completed",
+        "Completed Dashboard View",
+        "Complete Overview",
+        "Table",
+        "Version History"
+      ],
+      "worksheet_dimensions": {
+        "Proprietary Disclosure": {
+          "rows": 24,
+          "columns": 2
+        },
+        "Dashboard": {
+          "rows": 52,
+          "columns": 14
+        },
+        "In Process": {
+          "rows": 56,
+          "columns": 47
+        },
+        "In Process By Property": {
+          "rows": 50,
+          "columns": 39
+        },
+        "Completed": {
+          "rows": 36,
+          "columns": 48
+        },
+        "Completed Dashboard View": {
+          "rows": 31,
+          "columns": 6
+        },
+        "Complete Overview": {
+          "rows": 26,
+          "columns": 22
+        },
+        "Table": {
+          "rows": 6990,
+          "columns": 111
+        },
+        "Version History": {
+          "rows": 4,
+          "columns": 3
+        }
+      },
+      "structural_signature": "FC5F7F9AE5BCB138EFFB4FD3AD5D2C3697801104F38656DA4202394C70870482",
+      "normalized_package_sha256": "0E7B462433EA8B3AABEB21349FFCC015664230C1CF3B6EE73FA32724A41CD783",
+      "excluded_members": [
+        "docProps/core.xml",
+        "xl/calcChain.xml",
+        "xl/worksheets/sheet9.xml"
+      ],
+      "changed_members_vs_latest": []
+    }
+  ],
+  "limitations": [
+    "The approved manual reference workbook was not available.",
+    "Structural and package consistency do not prove financial reconciliation.",
+    "Runs may reflect different code versions or configurations unless a run manifest proves otherwise.",
+    "Normalized package hashes exclude document metadata, calculation chain data, and Version History content."
+  ]
+}

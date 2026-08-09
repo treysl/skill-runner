@@ -9,6 +9,7 @@ outputs/*.xlsx
 outputs/system-testing-evidence/
 outputs/system-testing-*.json
 outputs/*.log
+outputs/run-manifests/
 scripts/build_system_testing_report.py
 data/*.xlsx
 !data/.gitkeep

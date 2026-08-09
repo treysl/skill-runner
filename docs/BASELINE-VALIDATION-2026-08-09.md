@@ -36,7 +36,7 @@ builder. The newly generated workbook then passed all system acceptance checks.
 | Selected division | Construction |
 | Construction rows observed | 1,272 |
 | Completed window | Year to date |
-| Output | `outputs/THG_CIP_Report_20260809_112243.xlsx` |
+| Output | `outputs/CIP_Report_20260809_112243.xlsx` |
 | Output size | 3,926,024 bytes |
 | Output worksheets | 9 |
 | AI-use disclaimer returned | Yes |
