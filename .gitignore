@@ -6,6 +6,10 @@ __pycache__/
 .pytest_cache/
 .runner-cache/
 outputs/*.xlsx
+outputs/system-testing-evidence/
+outputs/system-testing-*.json
+outputs/*.log
+scripts/build_system_testing_report.py
 data/*.xlsx
 !data/.gitkeep
 !outputs/.gitkeep
