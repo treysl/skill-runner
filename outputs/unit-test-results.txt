@@ -1,3 +1,7 @@
+Validation date: 2026-08-09
+Environment: Python 3.12.13, cleanly recreated .venv
+Command: .\.venv\Scripts\python.exe -m unittest discover -s tests -v
+
 test_at_least_one_division_is_required (test_build.BuildArgumentTests.test_at_least_one_division_is_required) ... ok
 test_config_is_translated_to_an_argument_list (test_build.BuildArgumentTests.test_config_is_translated_to_an_argument_list) ... ok
 test_safe_name_removes_path_and_shell_punctuation (test_build.BuildArgumentTests.test_safe_name_removes_path_and_shell_punctuation) ... ok
@@ -18,6 +22,6 @@ test_finds_skill_root_inside_single_top_level_directory (test_skill_loader.Skill
 test_missing_package_raises_clear_error (test_skill_loader.SkillLoaderTests.test_missing_package_raises_clear_error) ... ok
 
 ----------------------------------------------------------------------
-Ran 18 tests in 0.062s
+Ran 18 tests in 0.060s
 
 OK

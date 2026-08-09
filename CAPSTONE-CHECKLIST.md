@@ -84,13 +84,13 @@
 - [ ] Runner API implemented (inspect, orchestrate, build, `/run`)
 - [ ] OpenRouter integration for pre-flight orchestration
 - [ ] Runtime config in markdown (`runner/cip-orchestration.md`) for division/date defaults
-- [ ] n8n workflow created and tested locally
+- [x] n8n workflow created and tested locally
 - [ ] Sample/anonymized data used for development
-- [ ] End-to-end pipeline run succeeds
-- [ ] Completed-tab date window validated (YTD default)
-- [ ] Division filter validated (Construction-only default)
-- [ ] Five-run reproducibility test executed and recorded
-- [ ] Runtime and log output captured
+- [x] End-to-end pipeline run succeeds
+- [x] Completed-tab date window validated (YTD default)
+- [x] Division filter validated (Construction-only default)
+- [x] Five-run reproducibility test executed and recorded
+- [x] Runtime and log output captured
 
 ### 4. Monitoring — Draft preparation
 - [ ] Capstone draft written from prototype results
@@ -112,7 +112,7 @@
 - [x] n8n workflow (`n8n/cip-report-pipeline.json`)
 - [x] First successful CIP report generated from anonymized sample data
 - [ ] Run log: data source, skill package, script version, timestamp per execution
-- [ ] Five consecutive reproducibility runs documented
+- [x] Five consecutive reproducibility runs documented
 - [ ] Before/after efficiency comparison documented
 
 ---
@@ -170,8 +170,8 @@
 
 ## Acceptance criteria (closure)
 
-- [ ] Prototype generates at least one report without chat during execution
-- [ ] Reproducibility demonstrated (≥ 5 consistent runs)
+- [x] Prototype generates at least one report without chat during execution
+- [x] Reproducibility demonstrated (≥ 5 consistent runs)
 - [ ] Documentation sufficient for handoff
 - [ ] Ethical/security mitigations implemented for prototype phase
 - [ ] Evaluation and scaling reflection completed
@@ -185,8 +185,7 @@
 
 | Date | Milestone                     | Result |
 | ---- | ----------------------------- | ------ |
-|      | First end-to-end n8n run      |        |
-|      | Construction-only + YTD run   |        |
-|      | Five-run reproducibility test |        |
-
+| 2026-06-28 | First end-to-end n8n run | PASS - anonymized source produced the CIP workbook |
+| 2026-08-09 | Construction-only + YTD run | PASS - 6,989 input rows; 133.818 seconds; 9-sheet output |
+| 2026-07-15 | Five-run reproducibility test | PASS - five consistent outputs documented in `docs/images/goal2-reproducibility-outputs.png` |
 
