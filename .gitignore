@@ -6,6 +6,18 @@ __pycache__/
 .pytest_cache/
 .runner-cache/
 outputs/*.xlsx
+outputs/system-testing-evidence/
+outputs/system-testing-*.json
+outputs/*.log
+outputs/run-manifests/
+scripts/build_system_testing_report.py
+
+# Large screen recordings retained outside Git
+docs/**/*.mp4
+
+# Microsoft Office temporary files
+~$*.docx
+~$*.xlsx
 data/*.xlsx
 !data/.gitkeep
 !outputs/.gitkeep

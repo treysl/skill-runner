@@ -1,8 +1,17 @@
+Validation date: 2026-08-09
+Environment: Python 3.12.13, cleanly recreated .venv
+Command: .\.venv\Scripts\python.exe -m unittest discover -s tests -v
+
+test_byte_hash_is_uppercase_and_stable (test_analyze_reproducibility.ReproducibilityHelperTests.test_byte_hash_is_uppercase_and_stable) ... ok
 test_at_least_one_division_is_required (test_build.BuildArgumentTests.test_at_least_one_division_is_required) ... ok
 test_config_is_translated_to_an_argument_list (test_build.BuildArgumentTests.test_config_is_translated_to_an_argument_list) ... ok
+test_default_output_name_does_not_include_client_name (test_build.BuildArgumentTests.test_default_output_name_does_not_include_client_name) ... ok
 test_safe_name_removes_path_and_shell_punctuation (test_build.BuildArgumentTests.test_safe_name_removes_path_and_shell_punctuation) ... ok
 test_failed_subprocess_raises_with_diagnostics (test_build.RunBuildTests.test_failed_subprocess_raises_with_diagnostics) ... ok
 test_successful_subprocess_result_is_returned (test_build.RunBuildTests.test_successful_subprocess_result_is_returned) ... ok
+test_failure_manifest_preserves_error_type (test_evidence.EvidenceManifestTests.test_failure_manifest_preserves_error_type) ... ok
+test_sha256_file_is_stable (test_evidence.EvidenceManifestTests.test_sha256_file_is_stable) ... ok
+test_success_manifest_records_traceable_artifacts (test_evidence.EvidenceManifestTests.test_success_manifest_records_traceable_artifacts) ... ok
 test_named_file_cannot_escape_data_directory (test_inspect.FindInputFileTests.test_named_file_cannot_escape_data_directory) ... ok
 test_named_file_must_exist_and_be_xlsx (test_inspect.FindInputFileTests.test_named_file_must_exist_and_be_xlsx) ... ok
 test_raises_when_data_directory_has_no_workbooks (test_inspect.FindInputFileTests.test_raises_when_data_directory_has_no_workbooks) ... ok
@@ -13,11 +22,17 @@ test_extract_json_handles_plain_and_fenced_responses (test_orchestrate.Orchestra
 test_runtime_defaults_do_not_replace_explicit_values (test_orchestrate.OrchestrationHelperTests.test_runtime_defaults_do_not_replace_explicit_values) ... ok
 test_missing_required_columns_stop_orchestration (test_orchestrate.OrchestrationTests.test_missing_required_columns_stop_orchestration) ... ok
 test_offline_fallback_uses_observed_divisions_and_overrides (test_orchestrate.OrchestrationTests.test_offline_fallback_uses_observed_divisions_and_overrides) ... ok
+test_failed_run_attempts_failure_manifest (test_pipeline.PipelineEvidenceTests.test_failed_run_attempts_failure_manifest) ... ok
+test_successful_run_returns_manifest_path (test_pipeline.PipelineEvidenceTests.test_successful_run_returns_manifest_path) ... ok
+test_numeric_values_fail_outside_relative_tolerance (test_reconcile_workbooks.ReconciliationCalculationTests.test_numeric_values_fail_outside_relative_tolerance) ... ok
+test_numeric_values_pass_within_absolute_tolerance (test_reconcile_workbooks.ReconciliationCalculationTests.test_numeric_values_pass_within_absolute_tolerance) ... ok
+test_supported_aggregates (test_reconcile_workbooks.ReconciliationCalculationTests.test_supported_aggregates) ... ok
+test_text_values_require_exact_match (test_reconcile_workbooks.ReconciliationCalculationTests.test_text_values_require_exact_match) ... ok
 test_extracts_flat_package_and_reuses_cache (test_skill_loader.SkillLoaderTests.test_extracts_flat_package_and_reuses_cache) ... ok
 test_finds_skill_root_inside_single_top_level_directory (test_skill_loader.SkillLoaderTests.test_finds_skill_root_inside_single_top_level_directory) ... ok
 test_missing_package_raises_clear_error (test_skill_loader.SkillLoaderTests.test_missing_package_raises_clear_error) ... ok
 
 ----------------------------------------------------------------------
-Ran 18 tests in 0.062s
+Ran 29 tests in 0.099s
 
 OK

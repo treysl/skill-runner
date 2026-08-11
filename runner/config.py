@@ -18,6 +18,9 @@ SKILL_CACHE_DIR = Path(
 
 DATA_DIR = Path(os.getenv("DATA_DIR", ROOT / "data")).expanduser()
 OUTPUT_DIR = Path(os.getenv("OUTPUT_DIR", ROOT / "outputs")).expanduser()
+OUTPUT_FILENAME_PREFIX = (
+    os.getenv("OUTPUT_FILENAME_PREFIX", "CIP_Report").strip() or "CIP_Report"
+)
 LOGO_PATH = os.getenv("LOGO_PATH", "").strip() or None
 
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "").strip()

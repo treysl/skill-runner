@@ -4,6 +4,10 @@ Run Agent Skills locally and trigger them from **n8n**, with **OpenRouter** orch
 
 The first bundled skill is **CIP Report v06-03-26** — it builds a THG Construction In Process Excel workbook from an Aspire Opportunity export.
 
+Generated workbooks use the neutral runtime name
+`CIP_Report_YYYYMMDD_HHMMSS.xlsx`. Set `OUTPUT_FILENAME_PREFIX` in `.env` to
+use another prefix without coupling filenames to the report's client name.
+
 ## Prototype
 
 End-to-end run via n8n: manual trigger → local runner → CIP workbook (~7k rows in, report out in ~2 minutes).
@@ -36,6 +40,12 @@ flowchart LR
 2. n8n calls `POST /run` on the local runner.
 3. The runner inspects the export, asks OpenRouter for pre-flight settings, then runs the build script.
 4. The finished workbook lands in `OUTPUT_DIR`.
+
+Each completed run also writes a JSON manifest under
+`OUTPUT_DIR/run-manifests/`. The manifest records input and output hashes,
+configuration, row counts, workbook structure, timing, skill-package identity,
+and Git state. Failed runs write a failure manifest without masking the original
+pipeline error.
 
 ## Setup
 

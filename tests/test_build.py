@@ -6,10 +6,17 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from runner.build import _safe_name, config_to_cli_args, run_build
+from runner.build import _safe_name, build_output_path, config_to_cli_args, run_build
 
 
 class BuildArgumentTests(unittest.TestCase):
+    def test_default_output_name_does_not_include_client_name(self) -> None:
+        with patch("runner.build.OUTPUT_FILENAME_PREFIX", "CIP_Report"):
+            output_path = build_output_path()
+
+        self.assertRegex(output_path.name, r"^CIP_Report_\d{8}_\d{6}\.xlsx$")
+        self.assertNotIn("THG", output_path.name)
+
     def test_safe_name_removes_path_and_shell_punctuation(self) -> None:
         self.assertEqual(_safe_name("../Acme & Sons"), "___Acme___Sons")
         self.assertEqual(_safe_name("***"), "___")

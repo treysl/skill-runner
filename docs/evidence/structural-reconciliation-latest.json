@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "overall_result": "PASS",
+  "reference": "CIP_Report_20260809_112243.xlsx",
+  "candidate": "CIP_Report_20260809_122617.xlsx",
+  "structural_checks": [
+    {
+      "id": "required_worksheets",
+      "passed": true,
+      "missing_from_reference": [],
+      "missing_from_candidate": []
+    },
+    {
+      "id": "dimensions:Proprietary Disclosure",
+      "sheet": "Proprietary Disclosure",
+      "reference": {
+        "rows": 24,
+        "columns": 2
+      },
+      "candidate": {
+        "rows": 24,
+        "columns": 2
+      },
+      "passed": true
+    },
+    {
+      "id": "dimensions:Dashboard",
+      "sheet": "Dashboard",
+      "reference": {
+        "rows": 52,
+        "columns": 14
+      },
+      "candidate": {
+        "rows": 52,
+        "columns": 14
+      },
+      "passed": true
+    },
+    {
+      "id": "dimensions:In Process",
+      "sheet": "In Process",
+      "reference": {
+        "rows": 56,
+        "columns": 47
+      },
+      "candidate": {
+        "rows": 56,
+        "columns": 47
+      },
+      "passed": true
+    },
+    {
+      "id": "dimensions:In Process By Property",
+      "sheet": "In Process By Property",
+      "reference": {
+        "rows": 50,
+        "columns": 39
+      },
+      "candidate": {
+        "rows": 50,
+        "columns": 39
+      },
+      "passed": true
+    },
+    {
+      "id": "dimensions:Completed",
+      "sheet": "Completed",
+      "reference": {
+        "rows": 36,
+        "columns": 48
+      },
+      "candidate": {
+        "rows": 36,
+        "columns": 48
+      },
+      "passed": true
+    },
+    {
+      "id": "dimensions:Completed Dashboard View",
+      "sheet": "Completed Dashboard View",
+      "reference": {
+        "rows": 31,
+        "columns": 6
+      },
+      "candidate": {
+        "rows": 31,
+        "columns": 6
+      },
+      "passed": true
+    },
+    {
+      "id": "dimensions:Complete Overview",
+      "sheet": "Complete Overview",
+      "reference": {
+        "rows": 26,
+        "columns": 22
+      },
+      "candidate": {
+        "rows": 26,
+        "columns": 22
+      },
+      "passed": true
+    },
+    {
+      "id": "dimensions:Table",
+      "sheet": "Table",
+      "reference": {
+        "rows": 6990,
+        "columns": 111
+      },
+      "candidate": {
+        "rows": 6990,
+        "columns": 111
+      },
+      "passed": true
+    },
+    {
+      "id": "dimensions:Version History",
+      "sheet": "Version History",
+      "reference": {
+        "rows": 4,
+        "columns": 3
+      },
+      "candidate": {
+        "rows": 4,
+        "columns": 3
+      },
+      "passed": true
+    }
+  ],
+  "value_checks": [],
+  "summary": {
+    "checks": 10,
+    "passed": 10,
+    "failed": 0
+  },
+  "limitations": [
+    "No financial value checks were configured; this result validates structure only."
+  ]
+}

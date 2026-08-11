@@ -4,6 +4,12 @@
 **Evaluation date:** 2026-07-28  
 **Evidence folder:** [`docs/images/`](images/) · raw metrics: [`outputs/performance-eval.json`](../outputs/performance-eval.json)
 
+> **Current verification (2026-08-09):** The expanded suite passes 29/29 tests.
+> A fresh instrumented n8n run processed 6,989 rows in 87.314 seconds, produced
+> a 3,925,982-byte nine-sheet workbook, generated its JSON audit manifest, and
+> passed all four system acceptance checks. The detailed tables and figures
+> below preserve the earlier performance-study snapshot for comparability.
+
 ---
 
 ## 1. Quantitative metrics

@@ -10,6 +10,10 @@ critical decision boundaries:
 - successful and failed build-process handling;
 - offline orchestration defaults, explicit overrides, and pre-flight rejection;
 - packaged skill extraction and cache reuse.
+- structured success and failure run manifests;
+- neutral output filename generation;
+- reconciliation tolerance calculations; and
+- reproducibility evidence hashing.
 
 The tests combine **white-box unit testing** (exercising internal branches and
 helpers such as JSON extraction and CLI argument construction) with
@@ -30,7 +34,7 @@ The latest captured execution log is written to
 
 ## Result
 
-The final run completed **18 tests with 0 failures and 0 errors**. All external
+The final run completed **29 tests with 0 failures and 0 errors**. All external
 interactions were mocked, so this result specifically verifies unit behavior
 rather than network or end-to-end integration behavior.
 
